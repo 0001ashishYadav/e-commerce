@@ -1,4 +1,13 @@
-import { ArrowLeft, ArrowRight, ChevronRight } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  Camera,
+  ChevronRight,
+  Computer,
+  Gamepad,
+  Headphones,
+  Smartphone,
+} from "lucide-react";
 import React from "react";
 import Slider from "../components/Slider";
 import RatingComponent from "../components/RatingComponent";
@@ -42,6 +51,7 @@ function HomePage() {
       isAddWishlist: false,
     },
   ];
+
   return (
     <>
       <section className="pt-12 md:pt-18">
@@ -80,7 +90,7 @@ function HomePage() {
 
         {/* Today's section */}
 
-        <div className="md:h-[80vh] w-[95%] max-w-7xl mx-auto md:my-16 text-gray-400">
+        <div className="md:h-[84vh] w-[95%] max-w-7xl mx-auto md:my-16 border-b-[1px] border-gray-200 text-gray-400">
           {/* title */}
           <div className="flex gap-2 items-center">
             <div className="h-8 w-4 rounded bg-red-400"></div>
@@ -142,10 +152,10 @@ function HomePage() {
             {sliderCardContent.map((ele) => (
               <div
                 key={ele.proId}
-                className="h-[100%] min-w-[95%] md:min-w-[24%] "
+                className="h-[100%] min-w-[95%] md:min-w-[24%] rounded"
               >
                 {/* img sec */}
-                <div className="h-[70%] bg-gray-100 flex justify-center items-center">
+                <div className="h-[70%] bg-gray-100 flex justify-center items-center rounded">
                   <img className="h-[140px]" src={ele.img} />
                 </div>
 
@@ -167,10 +177,85 @@ function HomePage() {
           </div>
 
           {/* button sec */}
-          <div className="flex justify-center items-center mt-6 ">
+          <div className="flex justify-center items-center my-6 ">
             <button className="md:px-8 px-3 md:py-3 py-1 bg-red-400 rounded text-white font-semibold">
               View All Product
             </button>
+          </div>
+        </div>
+
+        {/* categories Section */}
+
+        <div className="h-[40vh] max-w-7xl border-b-[1px] border-gray-200 mx-auto mb-5">
+          {/* title */}
+          <div className="flex gap-2 items-center">
+            <div className="h-8 w-4 rounded bg-red-400"></div>
+            <p className="text-red-400 font-semibold">Categories</p>
+          </div>
+
+          {/* Browse By Category sec */}
+
+          <div className="flex justify-between items-end my-3 md:mb-8">
+            {/* left con */}
+
+            <div className="w-[50%] h-[100%] grid md:flex justify-between items-end">
+              <p className="text-2xl font-semibold">Browse By Category</p>
+            </div>
+
+            {/* right con */}
+            <div className="hidden md:flex gap-2 items-end">
+              <button className="h-10 w-10 rounded-full flex justify-center items-center bg-gray-100">
+                <ArrowLeft />
+              </button>
+              <button className="h-10 w-10 rounded-full flex justify-center items-center bg-gray-100">
+                <ArrowRight />
+              </button>
+            </div>
+          </div>
+
+          {/* icon sec */}
+
+          <div className="h-[50%] flex justify-center items-center gap-5 border border-red-800">
+            {/* phone */}
+
+            <div className="h-[80%] w-[10%] grid justify-center items-center border border-red-400 hover:text-white hover:bg-red-400 rounded ">
+              <Smartphone size={70} />
+              <p className="text-2xl">Phones</p>
+            </div>
+
+            {/* computer */}
+
+            <div className="h-[80%] w-[10%] grid justify-center items-center border border-red-400 hover:text-white hover:bg-red-400 rounded ">
+              <Computer size={70} />
+              <p className="text-2xl">Computers</p>
+            </div>
+
+            {/* smartwatch */}
+
+            <div className="h-[80%] w-[10%] grid justify-center items-center border border-red-400 hover:text-white hover:bg-red-400 rounded ">
+              <Camera size={70} />
+              <p className="text-2xl">Camera</p>
+            </div>
+
+            {/* camera */}
+            <div className="h-[80%] w-[10%] grid justify-center items-center border border-red-400 hover:text-white hover:bg-red-400 rounded ">
+              <Camera size={70} />
+              <p>Camera</p>
+            </div>
+
+            {/* headphones */}
+
+            <div className="h-[80%] w-[10%] grid justify-center items-center border border-red-400 hover:text-white hover:bg-red-400 rounded ">
+              <Headphones size={70} />
+              <p>Headphones</p>
+            </div>
+
+            {/* gaming */}
+
+            <div className="h-[80%] w-[10%] grid justify-center items-center border border-red-400 hover:text-white hover:bg-red-400 rounded ">
+              <Gamepad size={70} />
+              <p className="text-2xl">Gaming</p>
+            </div>
           </div>
         </div>
       </section>
