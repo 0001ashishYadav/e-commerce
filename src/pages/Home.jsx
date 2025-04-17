@@ -1,14 +1,53 @@
 import { ArrowLeft, ArrowRight, ChevronRight } from "lucide-react";
 import React from "react";
 import Slider from "../components/Slider";
+import RatingComponent from "../components/RatingComponent";
 
 function HomePage() {
+  const sliderCardContent = [
+    {
+      proId: "1",
+      img: "/heroTodayAssets/ak-900-wired-keyboard.png",
+      title: "AK 900 wired keyboard",
+      dPrice: "$120",
+      price: "$1160",
+      rating: "4",
+      isAddWishlist: false,
+    },
+    {
+      proId: "2",
+      img: "/heroTodayAssets/hv-g92-gamepad.png",
+      title: "Havit HV G92 gamepad",
+      dPrice: "$120",
+      price: "$160",
+      rating: "5",
+      isAddWishlist: false,
+    },
+    {
+      proId: "3",
+      img: "/heroTodayAssets/ips-lcd-gaming-moniter.png",
+      title: "IPS LCD gaming moniter",
+      dPrice: "$370",
+      price: "$400",
+      rating: "5",
+      isAddWishlist: false,
+    },
+    {
+      proId: "4",
+      img: "/heroTodayAssets/s-series-comfort-chair.png",
+      title: "S Series Comfort Chair",
+      dPrice: "$375",
+      price: "$400",
+      rating: "4.5",
+      isAddWishlist: false,
+    },
+  ];
   return (
     <>
       <section className="pt-12 md:pt-18">
         {/* hero section */}
 
-        <div className="h-[50vh] max-w-7xl flex flex-col-reverse md:flex-row items-center gap-3 md:gap-0 justify-center mx-auto my-3 md:my-6">
+        <div className="md:h-[50vh] max-w-7xl flex flex-col-reverse md:flex-row items-center gap-3 md:gap-0 justify-center mx-auto my-3 md:my-6">
           {/* left con */}
           <div className="h-[100%] w-[95%] md:w-[30%] px-3">
             <ul className="flex flex-col gap-4 justify-center h-[100%] text-gray-500">
@@ -41,7 +80,7 @@ function HomePage() {
 
         {/* Today's section */}
 
-        <div className="h-[80vh] max-w-7xl mx-auto md:my-16 border text-gray-400">
+        <div className="md:h-[80vh] w-[95%] max-w-7xl mx-auto md:my-16 text-gray-400">
           {/* title */}
           <div className="flex gap-2 items-center">
             <div className="h-8 w-4 rounded bg-red-400"></div>
@@ -50,44 +89,44 @@ function HomePage() {
 
           {/* flash sales sec */}
 
-          <div className="flex justify-between items-end border h-16 md:my-6">
+          <div className="flex justify-between items-end md:h-16 my-3 md:my-6">
             {/* left con */}
 
-            <div className="w-[50%] h-[100%] flex justify-between items-end border">
+            <div className="w-[50%] h-[100%] grid md:flex justify-between items-end">
               <p className="text-2xl font-semibold">Flash Sales</p>
               <div className="flex gap-2 items-center">
                 {/* days */}
-                <div>
+                <div className="text-center">
                   <p>Days</p>
-                  <p className="text-2xl font-bold">03</p>
+                  <p className="md:text-2xl font-bold">03</p>
                 </div>
 
                 <span className="text-red-400 text-2xl font-bold">:</span>
 
                 {/* Hours */}
-                <div>
+                <div className="text-center">
                   <p>Hours</p>
-                  <p className="text-2xl font-bold">23</p>
+                  <p className="md:text-2xl font-bold">23</p>
                 </div>
                 <span className="text-red-400 text-2xl font-bold">:</span>
 
                 {/* Minutes */}
-                <div>
+                <div className="text-center">
                   <p>Minutes</p>
-                  <p className="text-2xl font-bold">19</p>
+                  <p className="md:text-2xl font-bold">19</p>
                 </div>
                 <span className="text-red-400 text-2xl font-bold">:</span>
 
                 {/* Seconds */}
-                <div>
+                <div className="text-center">
                   <p>Seconds</p>
-                  <p className="text-2xl font-bold">56</p>
+                  <p className="md:text-2xl font-bold">56</p>
                 </div>
               </div>
             </div>
 
             {/* right con */}
-            <div className="flex gap-2 items-end border">
+            <div className="hidden md:flex gap-2 items-end">
               <button className="h-10 w-10 rounded-full flex justify-center items-center bg-gray-100">
                 <ArrowLeft />
               </button>
@@ -99,11 +138,37 @@ function HomePage() {
 
           {/* slider sec */}
 
-          <div className="h-[50vh] border"></div>
+          <div className="h-[50vh] flex gap-5 px-5 scrollbar-hidden items-center overflow-scroll">
+            {sliderCardContent.map((ele) => (
+              <div
+                key={ele.proId}
+                className="h-[100%] min-w-[95%] md:min-w-[24%] "
+              >
+                {/* img sec */}
+                <div className="h-[70%] bg-gray-100 flex justify-center items-center">
+                  <img className="h-[140px]" src={ele.img} />
+                </div>
+
+                {/* description sec */}
+
+                <div className="pt-5">
+                  <p className="text-black font-semibold">{ele.title}</p>
+                  <div>
+                    <span className="text-red-400 pr-3">{ele.dPrice}</span>
+                    <span className="line-through">{ele.price}</span>
+                  </div>
+
+                  {/* rating */}
+
+                  <RatingComponent rating={ele.rating} />
+                </div>
+              </div>
+            ))}
+          </div>
 
           {/* button sec */}
-          <div className="flex justify-center items-center mt-6">
-            <button className="px-8 py-3 bg-red-400 rounded text-white font-semibold">
+          <div className="flex justify-center items-center mt-6 ">
+            <button className="md:px-8 px-3 md:py-3 py-1 bg-red-400 rounded text-white font-semibold">
               View All Product
             </button>
           </div>
