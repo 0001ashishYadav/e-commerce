@@ -386,7 +386,10 @@ function ProductPage() {
             </h2>
             <div className="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3">
               {relatedProducts.map((product) => (
-                <div key={product.name} className="group relative hover-lift">
+                <div
+                  key={product.name}
+                  className="group relative hover-lift p-4"
+                >
                   <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-white">
                     <img
                       src={product.image}

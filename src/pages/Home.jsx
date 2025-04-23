@@ -10,9 +10,9 @@ import {
 } from "lucide-react";
 import React from "react";
 import Slider from "../components/Slider";
-import RatingComponent from "../components/RatingComponent";
 import TodaySection from "../components/home/TodaySection";
 import ThisMonthSection from "../components/home/ThisMonthSection";
+import MiddleSlideSec from "../components/home/MiddleSlideSec";
 
 function HomePage() {
   return (
@@ -133,6 +133,10 @@ function HomePage() {
         {/* this month section */}
 
         <ThisMonthSection />
+
+        {/* middle section slider */}
+
+        <MiddleSlideSec />
       </section>
     </>
   );
