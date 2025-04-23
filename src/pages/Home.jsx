@@ -13,6 +13,7 @@ import Slider from "../components/Slider";
 import TodaySection from "../components/home/TodaySection";
 import ThisMonthSection from "../components/home/ThisMonthSection";
 import MiddleSlideSec from "../components/home/MiddleSlideSec";
+import OurProductSection from "../components/home/OurProductSection";
 
 function HomePage() {
   return (
@@ -137,6 +138,10 @@ function HomePage() {
         {/* middle section slider */}
 
         <MiddleSlideSec />
+
+        {/* our product sec */}
+
+        <OurProductSection />
       </section>
     </>
   );

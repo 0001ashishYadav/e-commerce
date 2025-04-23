@@ -33,7 +33,7 @@ const MiddleSlideSec = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % featuredProducts.length);
-    }, 5000);
+    }, 8000);
     return () => clearInterval(interval);
   }, []);
 
