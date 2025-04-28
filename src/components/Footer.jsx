@@ -65,7 +65,7 @@ function Footer() {
               Save $3 with App New User Only
             </li>
             <li>
-              <img src="" />
+              {/* <img src="" /> */}
               <div></div>
             </li>
             <li className="flex gap-5 text-white text-2xl">

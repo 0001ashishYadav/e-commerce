@@ -1,19 +1,11 @@
-import {
-  ArrowLeft,
-  ArrowRight,
-  Camera,
-  ChevronRight,
-  Computer,
-  Gamepad,
-  Headphones,
-  Smartphone,
-} from "lucide-react";
 import React from "react";
 import Slider from "../components/Slider";
 import TodaySection from "../components/home/TodaySection";
 import ThisMonthSection from "../components/home/ThisMonthSection";
 import MiddleSlideSec from "../components/home/MiddleSlideSec";
 import OurProductSection from "../components/home/OurProductSection";
+import { ChevronRight } from "lucide-react";
+import CategorySection from "../components/home/CategorySection";
 
 function HomePage() {
   return (
@@ -58,78 +50,7 @@ function HomePage() {
 
         {/* categories Section */}
 
-        <div className="md:h-[40vh] w-[95%] md:w-[100%] max-w-7xl border-b-[1px] border-gray-200 mx-auto mb-5">
-          {/* title */}
-          <div className="flex gap-2 items-center">
-            <div className="h-8 w-4 rounded bg-red-400"></div>
-            <p className="text-red-400 font-semibold">Categories</p>
-          </div>
-
-          {/* Browse By Category sec */}
-
-          <div className="flex justify-between items-end my-3 md:mb-8">
-            {/* left con */}
-
-            <div className="w-[50%] h-[100%] grid md:flex justify-between items-end">
-              <p className="text-2xl font-semibold">Browse By Category</p>
-            </div>
-
-            {/* right con */}
-            <div className="hidden md:flex gap-2 items-end">
-              <button className="h-10 w-10 rounded-full flex justify-center items-center bg-gray-100">
-                <ArrowLeft />
-              </button>
-              <button className="h-10 w-10 rounded-full flex justify-center items-center bg-gray-100">
-                <ArrowRight />
-              </button>
-            </div>
-          </div>
-
-          {/* icon sec */}
-
-          <div className="md:h-[50%] flex flex-wrap justify-between items-center">
-            {/* phone */}
-
-            <div className="h-[80%] md:w-[10%] w-[100px] grid justify-center items-center border border-red-400 hover:text-white hover:bg-red-400 rounded ">
-              <Smartphone size={70} />
-              <p className="text-2xl">Phones</p>
-            </div>
-
-            {/* computer */}
-
-            <div className="h-[80%] md:w-[10%] w-[100px] grid justify-center items-center border border-red-400 hover:text-white hover:bg-red-400 rounded ">
-              <Computer size={70} />
-              <p className="text-2xl">Computers</p>
-            </div>
-
-            {/* smartwatch */}
-
-            <div className="h-[80%] md:w-[10%] w-[100px] grid justify-center items-center border border-red-400 hover:text-white hover:bg-red-400 rounded ">
-              <Camera size={70} />
-              <p className="text-2xl">Camera</p>
-            </div>
-
-            {/* camera */}
-            <div className="h-[80%] md:w-[10%] w-[100px] grid justify-center items-center border border-red-400 hover:text-white hover:bg-red-400 rounded ">
-              <Camera size={70} />
-              <p>Camera</p>
-            </div>
-
-            {/* headphones */}
-
-            <div className="h-[80%] md:w-[10%] w-[100px] grid justify-center items-center border border-red-400 hover:text-white hover:bg-red-400 rounded ">
-              <Headphones size={70} />
-              <p>Headphones</p>
-            </div>
-
-            {/* gaming */}
-
-            <div className="h-[80%] md:w-[10%] w-[100px] grid justify-center items-center border border-red-400 hover:text-white hover:bg-red-400 rounded ">
-              <Gamepad size={70} />
-              <p className="text-2xl">Gaming</p>
-            </div>
-          </div>
-        </div>
+        <CategorySection />
 
         {/* this month section */}
 

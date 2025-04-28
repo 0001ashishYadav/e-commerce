@@ -107,7 +107,7 @@ const OurProductSection = () => {
 
       <div className="flex justify-between items-end md:h-16 my-3 md:my-6">
         <div className="w-[50%] h-[100%] grid md:flex justify-between items-end">
-          <p className="text-2xl font-semibold">Best Selling Products</p>
+          <p className="text-2xl font-semibold">Explore Our Products</p>
         </div>
 
         {/* navigation button sec */}
