@@ -71,10 +71,10 @@ const CategorySection = () => {
         {cardCon.map((ele, ind) => (
           <div
             key={ind}
-            className="md:h-[80%] h-[80px] md:w-[10%] w-[80px] flex flex-wrap justify-center items-center border border-red-400 hover:text-white hover:bg-red-400 rounded"
+            className="md:h-[80%] h-[80px] md:w-[10%] w-[80px] flex flex-col gap-3 justify-center items-center border border-red-400 hover:text-white hover:bg-red-400 rounded"
           >
-            <ele.icon size={45} />
-            <p className="text-sm">{ele.title}</p>
+            <ele.icon size={40} />
+            <p className="text-sm md:text-lg">{ele.title}</p>
           </div>
         ))}
       </div>

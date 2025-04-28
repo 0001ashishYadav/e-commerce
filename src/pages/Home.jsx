@@ -58,7 +58,9 @@ function HomePage() {
 
         {/* middle section slider */}
 
-        <MiddleSlideSec />
+        <section className="my-10 w-[95%] mx-auto">
+          <MiddleSlideSec />
+        </section>
 
         {/* our product sec */}
 

@@ -49,7 +49,7 @@ const MiddleSlideSec = () => {
   return (
     <section>
       {/* Featured Products Slider main con */}
-      <div className="slider-container h-[500px] mb-16 max-w-7xl mx-auto ">
+      <div className="slider-container h-[200px] md:h-[500px] mb-16 max-w-7xl mx-auto ">
         <div
           className="slider-wrapper h-full"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -69,10 +69,14 @@ const MiddleSlideSec = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
                   <div className="absolute bottom-0 left-0 p-8 text-white">
-                    <h2 className="text-4xl font-bold mb-2">{product.name}</h2>
-                    <p className="text-xl mb-4">{product.description}</p>
+                    <h2 className="md:text-4xl font-bold mb-2">
+                      {product.name}
+                    </h2>
+                    <p className="text-sm md:text-xl mb-4">
+                      {product.description}
+                    </p>
                     <p className="text-2xl font-bold mb-6">{product.price}</p>
-                    <button className="bg-white text-black px-6 py-3 rounded-full hover:bg-gray-100 transition-colors button-pop">
+                    <button className="bg-white hidden md:block text-black px-6 py-3 rounded-full hover:bg-gray-100 transition-colors button-pop">
                       Shop Now
                     </button>
                   </div>
@@ -81,10 +85,16 @@ const MiddleSlideSec = () => {
             </div>
           ))}
         </div>
-        <button className="slider-button prev" onClick={prevSlide}>
+        <button
+          className="slider-button hidden md:block prev"
+          onClick={prevSlide}
+        >
           <ChevronLeft className="w-6 h-6" />
         </button>
-        <button className="slider-button next" onClick={nextSlide}>
+        <button
+          className="slider-button hidden md:block next"
+          onClick={nextSlide}
+        >
           <ChevronRight className="w-6 h-6" />
         </button>
         <div className="slider-nav">
