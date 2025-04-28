@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import ProductPage from "./pages/Product";
 import SignupPage from "./pages/Signup";
 import LoginPage from "./pages/Login";
+import ContactPage from "./pages/Contact";
 
 function App() {
   return (
@@ -14,9 +15,10 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/product" element={<ProductPage />} />
-        <Route path="/product" element={<ProductPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
     </>
