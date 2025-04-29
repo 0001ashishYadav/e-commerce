@@ -37,10 +37,7 @@ function HomePage() {
           {/* right con */}
 
           <div className="h-[100%] w-[95%] md:w-[70%] flex justify-end items-end">
-            {/* slider sec */}
-            <div className="h-[98%] flex justify-end items-end w-[95%] overflow-scroll scrollbar-hidden">
-              <Slider />
-            </div>
+            <Slider />
           </div>
         </div>
 
