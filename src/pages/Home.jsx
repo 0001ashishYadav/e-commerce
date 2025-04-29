@@ -6,6 +6,7 @@ import MiddleSlideSec from "../components/home/MiddleSlideSec";
 import OurProductSection from "../components/home/OurProductSection";
 import { ChevronRight } from "lucide-react";
 import CategorySection from "../components/home/CategorySection";
+import FeaturedSection from "../components/home/FeaturedSection";
 
 function HomePage() {
   return (
@@ -62,6 +63,10 @@ function HomePage() {
         {/* our product sec */}
 
         <OurProductSection />
+
+        {/* featured product sectin */}
+
+        <FeaturedSection />
       </section>
     </>
   );
