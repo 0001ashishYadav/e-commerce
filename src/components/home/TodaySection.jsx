@@ -135,7 +135,7 @@ const TodaySection = () => {
       </div>
 
       {/* button sec */}
-      <div className="flex justify-center items-center my-6 ">
+      <div className="flex justify-center items-center text-[10px] md:text-xl my-6 ">
         <button className="md:px-8 px-3 md:py-3 py-1 bg-red-400 rounded text-white font-semibold">
           View All Product
         </button>

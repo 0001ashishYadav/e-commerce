@@ -96,7 +96,7 @@ const OurProductSection = () => {
     },
   ];
   return (
-    <section className=" border max-w-7xl mx-auto">
+    <section className=" max-w-7xl mx-auto">
       {/* title */}
       <div className="flex gap-2 items-center">
         <div className="h-8 w-4 rounded bg-red-400"></div>
@@ -106,7 +106,7 @@ const OurProductSection = () => {
       {/* Explore Our Products sec */}
 
       <div className="flex justify-between items-end md:h-16 my-3 md:my-6">
-        <div className="w-[50%] h-[100%] grid md:flex justify-between items-end">
+        <div className="md:w-[50%] h-[100%] grid md:flex justify-between items-end">
           <p className="text-2xl font-semibold">Explore Our Products</p>
         </div>
 
@@ -121,19 +121,22 @@ const OurProductSection = () => {
         </div>
       </div>
       {/* grid sec */}
-      <div className=" grid grid-cols-1 justify-center md:grid-cols-3 gap-10 items-center">
+      <div className=" flex flex-wrap justify-center  items-center gap-1.5 md:gap-4">
         {ourProductSliderCardContent.map((ele) => (
-          <div key={ele.proId} className="h-[400px] w-[95%] md:w-[80%] rounded">
+          <div
+            key={ele.proId}
+            className="h-[200px] md:h-[400px] w-[30%] rounded"
+          >
             {/* img sec */}
-            <div className="h-[70%] bg-gray-100 flex justify-center items-center rounded hover:scale-75 transition-all duration-500">
-              <img className="h-[140px]" src={ele.img} />
+            <div className="h-[50%] md:h-[70%] bg-gray-100 flex justify-center items-center rounded hover:scale-75 transition-all duration-500">
+              <img className="h-[60%] md:h-[140px]" src={ele.img} />
             </div>
 
             {/* description sec */}
 
-            <div className="pt-5">
-              <p className="text-black font-semibold">{ele.title}</p>
-              <div>
+            <div className="pt-5 text-[10px] md:text-[16px]">
+              <p className="text-black font-semibold ">{ele.title}</p>
+              <div className="">
                 <span className="text-red-400 pr-3">{ele.dPrice}</span>
                 <span className="line-through  text-gray-400">{ele.price}</span>
               </div>
@@ -147,6 +150,12 @@ const OurProductSection = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="flex justify-center items-center text-[10px] md:text-xl mb-5 md:my-10">
+        <button className="md:px-8 px-3 md:py-3 py-1 bg-red-400 rounded text-white font-semibold">
+          View All Products
+        </button>
       </div>
     </section>
   );
