@@ -7,6 +7,7 @@ import ProductPage from "./pages/Product";
 import SignupPage from "./pages/Signup";
 import LoginPage from "./pages/Login";
 import ContactPage from "./pages/Contact";
+import WishlistPage from "./pages/Wishlist";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
+        <Route path="/wishlist" element={<WishlistPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
