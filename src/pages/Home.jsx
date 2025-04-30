@@ -7,6 +7,7 @@ import OurProductSection from "../components/home/OurProductSection";
 import { ChevronRight } from "lucide-react";
 import CategorySection from "../components/home/CategorySection";
 import FeaturedSection from "../components/home/FeaturedSection";
+import CustomerServiceSec from "../components/home/CustomerServiceSec";
 
 function HomePage() {
   return (
@@ -67,6 +68,10 @@ function HomePage() {
         {/* featured product sectin */}
 
         <FeaturedSection />
+
+        {/* customer service section */}
+
+        <CustomerServiceSec />
       </section>
     </>
   );
