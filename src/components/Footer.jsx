@@ -2,7 +2,6 @@ import React from "react";
 import { IoSend } from "react-icons/io5";
 import { TiSocialFacebook } from "react-icons/ti";
 import { FaXTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
-import { NavLink } from "react-router";
 
 function Footer() {
   return (
