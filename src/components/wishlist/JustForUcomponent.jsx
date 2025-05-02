@@ -1,8 +1,8 @@
 import React from "react";
 import RatingComponent from "../RatingComponent";
 
-const WishlistComponent = () => {
-  const wishlistCardContent = [
+const JustForUcomponent = () => {
+  const jFuCardContent = [
     {
       proId: "1",
       img: "/heroThisMonthAssets/the-north-coat.png",
@@ -83,48 +83,41 @@ const WishlistComponent = () => {
       ratintCount: "60",
       isAddWishlist: false,
     },
-    {
-      proId: "9",
-      img: "/heroThisMonthAssets/gucci-duffle-bag.png",
-      title: "Gucci Duffle Bag",
-      dPrice: "$960",
-      price: "$1160",
-      rating: "4.5",
-      ratintCount: "97",
-      isAddWishlist: false,
-    },
   ];
-
   return (
-    <section className="">
-      <div className="flex justify-between items-center md:h-16 my-3 md:my-6">
-        <p>Wishlist ({wishlistCardContent.length})</p>
+    <div className="md:h-[80vh] w-[95%] max-w-7xl mx-auto md:my-16 border-b-[1px] py-8 md:py-0 border-gray-200">
+      <div className="flex justify-between items-end md:h-16 my-3 md:my-6">
+        {/* title */}
+        <div className="flex gap-2 items-center">
+          <div className="h-8 w-4 rounded bg-red-400"></div>
+          <p className="text-red-400 font-semibold">Just For You</p>
+        </div>
 
         {/* button sec */}
-        <div className="flex justify-center items-end text-[8px] md:text-sm ">
-          <button className="md:px-8 px-3 md:py-3 py-1 rounded font-medium border-2 border-gray-200">
-            Move All To Bag
-          </button>
-        </div>
+
+        <button className="md:px-8 px-3 md:py-3 text-[8px] md:text-sm py-1 rounded font-medium border-2 border-gray-200">
+          See All
+        </button>
       </div>
 
-      {/* wishlist sec */}
-      <div className=" flex flex-wrap justify-center  items-center gap-1.5 md:gap-4">
-        {wishlistCardContent.map((ele) => (
+      {/* slider sec */}
+
+      <div className="h-[50vh] flex gap-5 px-5 scrollbar-hidden items-center mt-5 md:mt-16 overflow-scroll">
+        {jFuCardContent.map((ele) => (
           <div
             key={ele.proId}
-            className="h-[200px] md:h-[400px] w-[30%] rounded"
+            className="h-[100%] min-w-[95%] md:min-w-[24%] rounded"
           >
             {/* img sec */}
-            <div className="h-[50%] md:h-[70%] bg-gray-100 flex justify-center items-center rounded hover:scale-75 transition-all duration-500">
-              <img className="h-[60%] md:h-[140px]" src={ele.img} />
+            <div className="h-[70%] bg-gray-100 flex justify-center items-center rounded hover:scale-75 transition-all duration-500">
+              <img className="h-[140px]" src={ele.img} />
             </div>
 
             {/* description sec */}
 
-            <div className="pt-5 text-[10px] md:text-[16px]">
-              <p className="text-black font-semibold ">{ele.title}</p>
-              <div className="">
+            <div className="pt-5">
+              <p className="text-black font-semibold">{ele.title}</p>
+              <div>
                 <span className="text-red-400 pr-3">{ele.dPrice}</span>
                 <span className="line-through  text-gray-400">{ele.price}</span>
               </div>
@@ -139,8 +132,8 @@ const WishlistComponent = () => {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 
-export default WishlistComponent;
+export default JustForUcomponent;

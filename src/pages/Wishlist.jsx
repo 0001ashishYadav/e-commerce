@@ -1,5 +1,6 @@
 import React from "react";
 import WishlistComponent from "../components/wishlist/WishlistComponent";
+import JustForUcomponent from "../components/wishlist/JustForUcomponent";
 
 const WishlistPage = () => {
   return (
@@ -7,6 +8,10 @@ const WishlistPage = () => {
       {/* wishlist */}
 
       <WishlistComponent />
+
+      {/* just for you section */}
+
+      <JustForUcomponent />
     </section>
   );
 };
