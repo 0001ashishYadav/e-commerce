@@ -1,5 +1,5 @@
-import { GithubIcon } from "lucide-react";
 import React from "react";
+import { BsGithub } from "react-icons/bs";
 import { Link } from "react-router";
 
 function SignupPage() {
@@ -10,10 +10,7 @@ function SignupPage() {
         {/* <!-- Left Pane --> */}
         <div className="hidden lg:flex items-center justify-center flex-1 bg-white text-black h-[100%]">
           <div className=" text-center h-[100%]">
-            <img
-              className="h-[100%]"
-              src="https://img.freepik.com/premium-photo/happy-asian-pretty-girl-holding-shopping-bags-while-using-smartphone_35721-211.jpg"
-            />
+            <img className="h-[100%]" src="/signUpAssets/pretty-girl.avif" />
           </div>
         </div>
         {/* <!-- Right Pane --> */}
@@ -31,7 +28,7 @@ function SignupPage() {
                   type="button"
                   className="w-full flex justify-center items-center gap-2 bg-white text-sm text-gray-600 p-2 rounded-md hover:bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 transition-colors duration-300"
                 >
-                  <img src="/assets/google.png" />
+                  <img src="/signUpAssets/google.png" />
                   Sign Up with Google
                 </button>
               </div>
@@ -40,7 +37,7 @@ function SignupPage() {
                   type="button"
                   className="w-full flex justify-center items-center gap-2 bg-white text-sm text-gray-600 p-2 rounded-md hover:bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 transition-colors duration-300"
                 >
-                  <GithubIcon />
+                  <BsGithub size={30} />
                   Sign Up with Github{" "}
                 </button>
               </div>
