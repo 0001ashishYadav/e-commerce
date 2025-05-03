@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 import { IoSend } from "react-icons/io5";
 import { TiSocialFacebook } from "react-icons/ti";
 import { FaXTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
@@ -29,8 +30,8 @@ function Footer() {
           <ul className="text-white hidden md:grid gap-4 text-sm">
             <li className="text-lg font-normal">Support</li>
             <li className="w-5%">
-              111 Bijoy sarani, Dhaka,
-              <br /> DH 1515, Bangladesh.
+              Inflection Org Pvt Ltd
+              <br /> Khamaria, Bhadohi.
             </li>
             <li>exclusiveEcommerce@gmail.com</li>
             <li>+91 4577635534</li>
@@ -41,9 +42,15 @@ function Footer() {
           <ul className="text-white hidden md:grid gap-4 text-sm">
             <li className="text-lg  font-semibold">Account</li>
             <li>My Account</li>
-            <li>Login / Register</li>
-            <li>cart</li>
-            <li>Wishlist</li>
+            <li>
+              <Link to="/login">Login / Register</Link>
+            </li>
+            <li>
+              <Link to="/cart">Cart</Link>
+            </li>
+            <li>
+              <Link to="/wishlist">Wishlist</Link>
+            </li>
           </ul>
 
           {/* 4 */}
@@ -53,7 +60,9 @@ function Footer() {
             <li>Privacy Policy</li>
             <li>Term of Use</li>
             <li>FAQ</li>
-            <li>Contact</li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
           </ul>
 
           {/* 5 */}
