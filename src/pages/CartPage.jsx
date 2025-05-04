@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { CartProvider } from "../context/CartItems";
+import React, { useEffect, useState } from "react";
+import useCart, { CartProvider } from "../context/CartItems";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 const CartPage = () => {
@@ -21,7 +21,7 @@ const CartPage = () => {
     },
     {
       img: "https://f.media-amazon.com/images/I/31Xz-5Ua8HL._SY300_SX300_QL70_FMwebp_.jpg",
-      title: "ECOVACS DEEBOT Robot Vacuum",
+      title: "ECOVACS DEEBOT Robot Vaccum",
       price: "1,29,999",
     },
     {
@@ -30,8 +30,14 @@ const CartPage = () => {
       price: "2,048",
     },
   ]);
+
+  function addToCart(item) {
+    setCartItem((pre) => [...pre, item]);
+    console.log(cartItem);
+  }
+
   return (
-    <CartProvider value={(cartItem, setCartItem)}>
+    <CartProvider>
       <section className="pt-16 md:pt-32 max-w-7xl mx-auto ">
         {/* title sec */}
 

@@ -1,6 +1,8 @@
 import { createContext, useContext } from "react";
 
-const CartContext = createContext();
+const CartContext = createContext({
+  addToCart: (item) => {},
+});
 
 export const CartProvider = CartContext.Provider;
 

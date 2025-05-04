@@ -1,7 +1,10 @@
 import React from "react";
 import RatingComponent from "../RatingComponent";
+import useCart from "../../context/CartItems";
 
 const WishlistComponent = () => {
+  const { addToCart } = useCart();
+
   const wishlistCardContent = [
     {
       proId: "1",
@@ -112,6 +115,7 @@ const WishlistComponent = () => {
       <div className=" flex flex-wrap justify-center  items-center gap-1.5 md:gap-4">
         {wishlistCardContent.map((ele) => (
           <div
+            onClick={() => addToCart(ele)}
             key={ele.proId}
             className="h-[200px] md:h-[400px] w-[30%] rounded"
           >
