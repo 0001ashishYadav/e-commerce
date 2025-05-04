@@ -22,7 +22,7 @@ const CustomerServiceSec = () => {
   return (
     <section className="h-[70vh] md:h-[40vh] max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center gap-10 md:gap-20 mb-5">
       {cardContent.map((ele, ind) => (
-        <div className="h-[55%] md:w-[20%] grid">
+        <div key={ind} className="h-[55%] md:w-[20%] grid">
           <div className=" bg-gray-300 h-[60px] w-[60px] rounded-full flex justify-center items-center mx-auto">
             <div className="h-[50px] w-[50px] rounded-full bg-[#0d0d0d] flex justify-center items-center">
               <img className="h-[40px]" src={ele.img} />
