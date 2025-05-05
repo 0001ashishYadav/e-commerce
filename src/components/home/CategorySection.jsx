@@ -25,7 +25,7 @@ const CategorySection = () => {
     },
     {
       icon: BsHeadphones,
-      title: "Hwadphone",
+      title: "Headphone",
     },
     {
       icon: CameraIcon,

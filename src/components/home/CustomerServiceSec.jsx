@@ -15,7 +15,7 @@ const CustomerServiceSec = () => {
     {
       img: "/heroNewArrivalAssets/Icon-secure.png",
       title: "MONEY BACK GUARANTEE",
-      description: "We reurn money within 30 days",
+      description: "We return money within 30 days",
     },
   ];
 
