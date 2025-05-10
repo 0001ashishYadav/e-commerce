@@ -1,7 +1,7 @@
 import React from "react";
 
 const CheckoutPage = () => {
-  return <div className="pt-18 max-w-7xl mx-auto">CheckoutPage</div>;
+  return <section className="pt-18 max-w-7xl mx-auto">CheckoutPage</section>;
 };
 
 export default CheckoutPage;

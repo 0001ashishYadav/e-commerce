@@ -1,7 +1,7 @@
 import React from "react";
 
 const AccountPage = () => {
-  return <div className="pt-18 max-w-7xl mx-auto">AccountPage</div>;
+  return <section className="pt-18 max-w-7xl mx-auto">AccountPage</section>;
 };
 
 export default AccountPage;
