@@ -10,6 +10,7 @@ import ContactPage from "./pages/Contact";
 import WishlistPage from "./pages/Wishlist";
 import CartPage from "./pages/CartPage";
 import AccountPage from "./pages/Account";
+import CheckoutPage from "./pages/Checkout";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/wishlist" element={<WishlistPage />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/account" element={<AccountPage />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
