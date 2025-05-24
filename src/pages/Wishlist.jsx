@@ -4,7 +4,7 @@ import JustForUcomponent from "../components/wishlist/JustForUcomponent";
 
 const WishlistPage = () => {
   return (
-    <section className="pt-18 max-w-7xl mx-auto ">
+    <section className="pt-18 max-w-7xl w-[90%] mx-auto ">
       {/* wishlist */}
 
       <WishlistComponent />
