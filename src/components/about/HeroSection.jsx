@@ -29,7 +29,7 @@ const HeroSection = () => {
 
       <div className="h-full w-full flex justify-center items-center">
         <img
-          src="/public/aboutAssets/heroSecImg.png"
+          src="/public/aboutAssets/aboutHero.png"
           className="h-full w-[95%] md:w-[100%]"
         />
       </div>
